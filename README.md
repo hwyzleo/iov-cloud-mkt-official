@@ -17,7 +17,7 @@
 ```bash
 npm install        # 安装依赖
 npm run dev        # 本地开发 http://localhost:5173
-npm test           # 单元 + 集成测试（31 项）
+npm test           # 单元 + 集成测试（32 项）
 npm run build      # 类型检查 + 静态构建到 dist/
 npm run preview    # 本地预览构建产物
 ```

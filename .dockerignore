@@ -1,0 +1,41 @@
+.git
+.gitignore
+.github
+.idea
+.vscode
+
+node_modules
+dist
+.npm-cache
+
+# 本地验证产物与知识图谱输出，不参与构建
+artifacts
+graphify-out
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+Jenkinsfile
+README.md
+AGENTS.md
+LICENSE
+
+# 未被页面引用的素材：保留在仓库中作为处理管线的源文件，但不进镜像。
+# 实测 public 共 25MB，页面实际只引用 7 个文件（约 2.3MB）。
+# 其中 HWYZ.png / Vehicle.png 是棋盘格原始素材，若打进镜像会被公网直接下载，
+# 与设计红线「原始素材不展示」冲突。
+# 重新生成资产时在本地跑 scripts/cutout.py 与 scripts/process_assets.py，不依赖镜像。
+public/assets/brand/HWYZ.png
+public/assets/brand/hwyz-lockup.png
+public/assets/brand/hwyz-lockup.svg
+public/assets/brand/hwyz-mark.svg
+public/assets/brand/hwyz-wordmark.svg
+public/assets/vehicles/hanchuan03/Vehicle.png
+
+# 视角切换只引用 .webp，这三张 JPEG 无任何引用（hero-front-3q.jpeg 是 <picture> 回退，保留）
+public/assets/vehicles/hanchuan03/exterior-front.jpeg
+public/assets/vehicles/hanchuan03/exterior-rear.jpeg
+public/assets/vehicles/hanchuan03/exterior-side.jpeg
