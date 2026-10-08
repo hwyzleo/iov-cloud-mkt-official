@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" role="img" aria-label="寒微雅致 HWYZ ADVANCED MOBILITY">
+  <!-- HWYZ 完整组合标（占位资产，待正式品牌素材替换） -->
+  <defs>
+    <linearGradient id="hwyz-lockup-wing" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#5B8CFF"/>
+      <stop offset="1" stop-color="#65F4D5"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0 5)">
+    <path d="M6 34 C 9 18, 20 8, 33 3 L 31 12 C 21 15, 15 21, 13 34 Z" fill="url(#hwyz-lockup-wing)"/>
+    <path d="M58 34 C 55 18, 44 8, 31 3 L 33 12 C 43 15, 49 21, 51 34 Z" fill="url(#hwyz-lockup-wing)"/>
+  </g>
+  <text x="66" y="22" font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="4" fill="#F4F7FA">HWYZ</text>
+  <text x="66" y="38" font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="9" letter-spacing="3" fill="#A8B0BE">ADVANCED MOBILITY</text>
+</svg>

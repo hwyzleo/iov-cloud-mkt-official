@@ -1,0 +1,339 @@
+/* ============================================================
+   Sections: BrandStatement / CapabilityGrid / ProductStage / TechnologyStory
+   ============================================================ */
+
+/* -- Buttons (shared) --------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease,
+    transform var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
+}
+
+.btn-primary {
+  background: var(--color-accent-cyan);
+  color: #08131a;
+  box-shadow: 0 4px 24px rgba(101, 244, 213, 0.22);
+}
+
+.btn-primary:hover {
+  background: #7ef7dd;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* -- Cards -------------------------------------------------- */
+.card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(101, 244, 213, 0.42);
+}
+
+/* -- Brand statement ---------------------------------------- */
+.brand-statement {
+  text-align: center;
+}
+
+.brand-statement .section-title {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.brand-statement-text {
+  margin: var(--space-6) auto 0;
+  max-width: 720px;
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* -- Capability grid ---------------------------------------- */
+.capability {
+  background: linear-gradient(180deg, var(--color-bg-primary), var(--color-bg-secondary));
+}
+
+.capability-grid {
+  margin-top: var(--space-7);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.capability-card {
+  grid-column: span 4;
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: var(--space-5);
+  color: var(--color-accent-cyan);
+}
+
+.capability-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.capability-card p {
+  margin-top: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
+/* -- Product stage ------------------------------------------ */
+.product-stage {
+  margin-top: var(--space-7);
+}
+
+.product-tagline {
+  margin-top: var(--space-3);
+  font-size: 18px;
+  color: var(--color-text-secondary);
+}
+
+.product-main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(720px 360px at 50% 60%, rgba(91, 140, 255, 0.14), transparent 65%),
+    var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  overflow: hidden;
+}
+
+.product-main img {
+  width: min(760px, 100%);
+  /* Feather opaque rect edges into the stage card background */
+  -webkit-mask-image: radial-gradient(ellipse 82% 90% at 50% 50%, #000 62%, transparent 97%);
+  mask-image: radial-gradient(ellipse 82% 90% at 50% 50%, #000 62%, transparent 97%);
+  transition: opacity var(--duration-base) ease;
+}
+
+.product-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.product-thumb {
+  min-height: 44px;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  transition: border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease,
+    background-color var(--duration-fast) ease;
+}
+
+.product-thumb:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+.product-thumb.is-active {
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+  background: rgba(101, 244, 213, 0.08);
+}
+
+.product-features {
+  margin-top: var(--space-7);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.product-features li {
+  grid-column: span 4;
+  padding: var(--space-6);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.product-features h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.product-features h3::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-bottom: var(--space-3);
+  background: var(--color-accent-cyan);
+}
+
+.product-features p {
+  margin-top: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
+/* -- Technology story --------------------------------------- */
+.technology {
+  background: linear-gradient(180deg, var(--color-bg-secondary), var(--color-bg-primary));
+}
+
+.tech-list {
+  margin-top: var(--space-6);
+}
+
+.tech-item {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  gap: var(--space-6);
+  padding-block: var(--space-7);
+}
+
+.tech-visual {
+  grid-column: 1 / span 5;
+}
+
+.tech-copy {
+  grid-column: 7 / span 6;
+}
+
+.tech-visual svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tech-copy h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tech-copy p {
+  margin-top: var(--space-3);
+  max-width: 460px;
+  color: var(--color-text-secondary);
+  font-size: 17px;
+}
+
+@media (max-width: 1199px) {
+  .capability-grid,
+  .product-features {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .capability-card,
+  .product-features li {
+    grid-column: span 4;
+  }
+
+  .capability-card:nth-child(3),
+  .product-features li:nth-child(3) {
+    grid-column: 3 / span 4;
+  }
+
+  .tech-item {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .tech-visual,
+  .tech-item:nth-child(even) .tech-visual {
+    grid-column: 1 / span 4;
+  }
+
+  .tech-copy,
+  .tech-item:nth-child(even) .tech-copy {
+    grid-column: 5 / span 4;
+  }
+}
+
+@media (max-width: 767px) {
+  .brand-statement-text {
+    font-size: 17px;
+  }
+
+  .capability-grid,
+  .product-features {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .capability-card,
+  .product-features li,
+  .capability-card:nth-child(3),
+  .product-features li:nth-child(3) {
+    grid-column: 1 / span 4;
+  }
+
+  .product-main {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .tech-item {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .tech-visual,
+  .tech-item:nth-child(even) .tech-visual,
+  .tech-copy,
+  .tech-item:nth-child(even) .tech-copy {
+    grid-column: 1 / span 4;
+  }
+
+  .tech-copy h3 {
+    font-size: 22px;
+  }
+}

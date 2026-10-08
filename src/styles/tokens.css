@@ -1,0 +1,53 @@
+/* ============================================================
+   Design Tokens (CR-MKT-OFFICIAL-DSN-001 / SPEC Design v0.1)
+   ============================================================ */
+:root {
+  /* -- Color ------------------------------------------------- */
+  --color-bg-primary: #080a0d;      /* 曜石黑 - page background */
+  --color-bg-secondary: #141820;    /* 深空灰 - cards / sections */
+  --color-text-primary: #f4f7fa;    /* 雾白 - primary text */
+  --color-text-secondary: #a8b0be;  /* 辅助文字 */
+  --color-accent-cyan: #65f4d5;     /* 电光青 - primary CTA */
+  --color-accent-blue: #5b8cff;     /* 冷蓝 - secondary gradient */
+  --color-brand-navy: #112b51;      /* 品牌深蓝参考色 */
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-strong: rgba(255, 255, 255, 0.28);
+  --color-danger: #ff6b6b;
+
+  /* -- Typography -------------------------------------------- */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Noto Sans SC', 'Helvetica Neue', Arial, sans-serif;
+
+  /* -- Spacing ------------------------------------------------ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* -- Radius ------------------------------------------------ */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+
+  /* -- Shadow ------------------------------------------------ */
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(101, 244, 213, 0.12);
+
+  /* -- Motion ------------------------------------------------ */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* -- Layout ------------------------------------------------ */
+  --container-max: 1280px;
+  --header-height: 72px;
+  --header-height-mobile: 60px;
+}
