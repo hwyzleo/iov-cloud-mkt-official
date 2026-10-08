@@ -70,10 +70,10 @@ export function initContactForm(form: HTMLFormElement): void {
     window.setTimeout(() => {
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = '提交预约交流';
+        submitBtn.textContent = '发起技术交流';
       }
       if (statusEl) {
-        statusEl.textContent = '提交成功（演示模式，未发送真实数据）。感谢关注，我们会尽快与你联系。';
+        statusEl.textContent = '提交成功（演示模式，未发送真实数据）。感谢分享，期待围绕车载技术的进一步交流。';
         statusEl.classList.remove('is-error');
         statusEl.classList.add('is-success');
       }

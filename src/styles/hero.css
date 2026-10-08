@@ -59,7 +59,7 @@
 
 .hero-title {
   margin-top: var(--space-4);
-  font-size: 72px;
+  font-size: 64px;
   line-height: 1.12;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -72,23 +72,68 @@
   color: var(--color-text-secondary);
 }
 
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.hero-tags li {
+  padding: 5px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+}
+
+.hero-tags li::before {
+  content: '#';
+  margin-right: 3px;
+  color: var(--color-accent-cyan);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
-  margin-top: var(--space-7);
+  margin-top: var(--space-6);
 }
 
 .hero-visual {
+  position: relative;
   grid-column: 6 / span 7;
 }
 
 .hero-visual img {
   width: 100%;
+  position: relative;
+  z-index: 0;
   /* AI asset ships on a near-#080A0D background with built-in cold rim light.
      Feather the opaque rect edges so it melts into the hero background. */
   -webkit-mask-image: radial-gradient(ellipse 80% 86% at 50% 48%, #000 60%, transparent 96%);
   mask-image: radial-gradient(ellipse 80% 86% at 50% 48%, #000 60%, transparent 96%);
+}
+
+/* Decorative technology layer above the vehicle */
+.hero-tech-overlay {
+  position: absolute;
+  inset: 4% 3% 8% 3%;
+  width: 94%;
+  height: 88%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.hero-tech-overlay .path-flow {
+  stroke-dasharray: 6 8;
+  animation: path-flow 3.2s linear infinite;
+}
+
+.hero-tech-overlay .node-pulse {
+  animation: node-pulse 2.8s ease-in-out infinite;
 }
 
 .hero-scroll {
@@ -147,8 +192,9 @@
 .hero-eyebrow { --reveal-delay: 0ms; }
 .hero-title   { --reveal-delay: 80ms; }
 .hero-subtitle { --reveal-delay: 160ms; }
-.hero-actions { --reveal-delay: 240ms; }
-.hero-visual  { --reveal-delay: 320ms; }
+.hero-tags    { --reveal-delay: 220ms; }
+.hero-actions { --reveal-delay: 280ms; }
+.hero-visual  { --reveal-delay: 340ms; }
 
 @keyframes hero-in {
   from {

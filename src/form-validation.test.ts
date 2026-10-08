@@ -57,7 +57,7 @@ describe('validateInterest', () => {
   });
 
   it('accepts a selected interest', () => {
-    expect(validateInterest('产品咨询').valid).toBe(true);
+    expect(validateInterest('智能座舱').valid).toBe(true);
   });
 });
 
@@ -89,8 +89,8 @@ describe('validateContactForm / hasFieldError', () => {
     const errors = validateContactForm({
       name: '王小雅',
       contact: 'wang@example.com',
-      interest: '产品咨询',
-      note: '想了解更多寒川03 的技术细节',
+      interest: '智能座舱',
+      note: '想交流 EE 架构的分层实践',
     });
     expect(hasFieldError(errors)).toBe(false);
   });

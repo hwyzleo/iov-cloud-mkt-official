@@ -1,28 +1,57 @@
 /* ============================================================
-   Contact section / form
+   TechExchange section / form
    ============================================================ */
-.contact {
+.exchange {
   background:
     radial-gradient(900px 480px at 18% 20%, rgba(91, 140, 255, 0.1), transparent 60%),
     var(--color-bg-primary);
 }
 
-.contact-inner {
+.exchange-inner {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--space-7);
   align-items: start;
 }
 
-.contact-copy {
+.exchange-copy {
   grid-column: 1 / span 5;
 }
 
-.contact-copy .section-lead {
+.exchange-copy .section-lead {
   font-size: 17px;
 }
 
-.contact-form {
+.exchange-channels {
+  margin-top: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.channel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease;
+}
+
+.channel-link::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-accent-cyan);
+  opacity: 0.7;
+}
+
+.channel-link:hover {
+  color: var(--color-text-primary);
+}
+
+.exchange-form {
   grid-column: 7 / span 6;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -133,21 +162,21 @@
 }
 
 @media (max-width: 1199px) {
-  .contact-inner {
+  .exchange-inner {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .contact-copy {
+  .exchange-copy {
     grid-column: 1 / span 8;
   }
 
-  .contact-form {
+  .exchange-form {
     grid-column: 1 / span 8;
   }
 }
 
 @media (max-width: 767px) {
-  .contact-form {
+  .exchange-form {
     grid-template-columns: 1fr;
     padding: var(--space-5);
   }

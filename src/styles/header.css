@@ -148,8 +148,14 @@
     height: 26px;
   }
 
-  .header-cta {
+  .header-actions .header-cta {
+    /* (0,2,0) beats .btn's display rule so the CTA really disappears on mobile */
     display: none;
+  }
+
+  .brand-name {
+    font-size: 17px;
+    letter-spacing: 0.06em;
   }
 
   .menu-toggle {

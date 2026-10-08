@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>寒川03 HanChuan03 | 寒微雅致 HWYZ – 寒雅车载技术研习录</title>
+  <title>寒雅车载技术研习录｜智能座舱、车联网与 EE 架构</title>
   <meta
     name="description"
-    content="寒微雅致 HWYZ 旗下寒川 HC 车系首款车型寒川03 HanChuan03：智能座舱、车云协同与数据智能，软件定义汽车，驶向更聪明的移动世界。"
+    content="记录智能座舱、车联网、EE 架构、软件定义汽车等车载技术的理解、实践与交流。"
   />
   <meta name="theme-color" content="#080A0D" />
   <link rel="icon" type="image/png" href="./favicon.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="寒川03 HanChuan03 | 寒微雅致 HWYZ" />
+  <meta property="og:title" content="寒雅车载技术研习录｜智能座舱、车联网与 EE 架构" />
   <meta
     property="og:description"
-    content="智能座舱、车云协同与数据智能——寒微雅致 HWYZ 寒川03 HanChuan03，驶向更聪明的移动世界。"
+    content="记录智能座舱、车联网、EE 架构、软件定义汽车等车载技术的理解、实践与交流。"
   />
   <meta property="og:image" content="./assets/vehicles/hanchuan03/hero-front-3q.webp" />
   <meta property="og:locale" content="zh_CN" />
@@ -32,7 +32,7 @@
   <!-- ============ Header ============ -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#hero" aria-label="寒微雅致 HWYZ 首页">
+      <a class="brand" href="#hero" aria-label="寒雅车载技术研习录 首页">
         <img
           class="brand-mark"
           src="./assets/brand/hwyz-mark-white.png"
@@ -40,20 +40,21 @@
           width="62"
           height="32"
         />
-        <span class="brand-name">HWYZ</span>
+        <span class="brand-name">寒雅车载技术研习录</span>
       </a>
 
       <nav class="site-nav" id="site-nav" aria-label="主导航">
         <ul>
-          <li><a href="#brand" data-nav>品牌</a></li>
-          <li><a href="#technology" data-nav>技术</a></li>
-          <li><a href="#product" data-nav>车型</a></li>
-          <li><a href="#contact" data-nav>关于</a></li>
+          <li><a href="#domains" data-nav>技术方向</a></li>
+          <li><a href="#notes" data-nav>技术文章</a></li>
+          <li><a href="#vehicle" data-nav>项目实践</a></li>
+          <li><a href="#exchange" data-nav>技术交流</a></li>
+          <li><a href="#lab" data-nav>关于</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-primary header-cta" href="#contact">预约交流</a>
+        <a class="btn btn-primary header-cta" href="#exchange">参与交流</a>
         <button
           class="menu-toggle"
           id="menu-toggle"
@@ -74,14 +75,20 @@
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="hero-eyebrow reveal-hero">寒微雅致 · ADVANCED MOBILITY</p>
-          <h1 class="hero-title reveal-hero">驶向更聪明的移动世界</h1>
+          <p class="hero-eyebrow reveal-hero">寒雅车载技术研习录 · VEHICLE TECH LAB</p>
+          <h1 class="hero-title reveal-hero">探索车载技术的下一种可能</h1>
           <p class="hero-subtitle reveal-hero">
-            聚焦智能座舱、车联网与下一代移动技术，以软件定义汽车，连接全域出行。
+            聚焦智能座舱、车联网、EE 架构与软件定义汽车，持续记录技术理解、架构思考与实践探索。
           </p>
+          <ul class="hero-tags reveal-hero" aria-label="核心研究方向">
+            <li>智能座舱</li>
+            <li>车联网</li>
+            <li>EE 架构</li>
+            <li>软件定义汽车</li>
+          </ul>
           <div class="hero-actions reveal-hero">
-            <a class="btn btn-primary" href="#product">探索寒川03</a>
-            <a class="btn btn-secondary" href="#contact">预约交流</a>
+            <a class="btn btn-primary" href="#domains">探索技术方向</a>
+            <a class="btn btn-secondary" href="#exchange">参与技术交流</a>
           </div>
         </div>
         <figure class="hero-visual reveal-hero">
@@ -92,248 +99,336 @@
             />
             <img
               src="./assets/vehicles/hanchuan03/hero-front-3q.jpeg"
-              alt="寒川03 HanChuan03 前侧 45° 外观"
+              alt="技术载体寒川03 HanChuan03 车身，叠加座舱、TBOX、云端与用户端技术节点"
               width="2752"
               height="1536"
               fetchpriority="high"
             />
           </picture>
+          <!-- Decorative tech layer: vehicle is a technical scenario backdrop. -->
+          <svg
+            class="hero-tech-overlay"
+            viewBox="0 0 640 360"
+            fill="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="ov-link" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#5B8CFF"/>
+                <stop offset="1" stop-color="#65F4D5"/>
+              </linearGradient>
+            </defs>
+            <!-- cockpit -> TBOX -> cloud -> client paths -->
+            <path d="M196 158C248 150 262 176 308 186" stroke="url(#ov-link)" stroke-width="1.6" stroke-dasharray="6 8" stroke-linecap="round" class="path-flow"/>
+            <path d="M322 208C372 190 386 150 428 138" stroke="url(#ov-link)" stroke-width="1.6" stroke-dasharray="6 8" stroke-linecap="round"/>
+            <path d="M462 128C500 140 502 214 540 236" stroke="url(#ov-link)" stroke-width="1.6" stroke-dasharray="6 8" stroke-linecap="round" class="path-flow"/>
+            <!-- nodes -->
+            <rect x="150" y="132" width="92" height="46" rx="10" fill="rgba(8,10,13,0.72)" stroke="rgba(101,244,213,0.55)" stroke-width="1.4"/>
+            <rect x="168" y="144" width="56" height="22" rx="4" fill="none" stroke="rgba(101,244,213,0.9)" stroke-width="1.2"/>
+            <path d="M174 153h18M174 159h24" stroke="#65F4D5" stroke-width="1.3" stroke-linecap="round"/>
+            <rect x="280" y="186" width="84" height="40" rx="10" fill="rgba(8,10,13,0.72)" stroke="rgba(91,140,255,0.6)" stroke-width="1.4"/>
+            <path d="M296 200h18M296 208h30M334 200h4" stroke="#5B8CFF" stroke-width="1.3" stroke-linecap="round"/>
+            <rect x="416" y="106" width="84" height="40" rx="10" fill="rgba(8,10,13,0.72)" stroke="rgba(101,244,213,0.55)" stroke-width="1.4"/>
+            <circle cx="446" cy="126" r="7" fill="none" stroke="#65F4D5" stroke-width="1.3"/>
+            <circle cx="446" cy="126" r="2.5" fill="#65F4D5" class="node-pulse"/>
+            <path d="M466 114h14M466 122h22M466 130h14" stroke="#65F4D5" stroke-width="1.3" stroke-linecap="round"/>
+            <rect x="516" y="218" width="84" height="40" rx="10" fill="rgba(8,10,13,0.72)" stroke="rgba(91,140,255,0.6)" stroke-width="1.4"/>
+            <path d="M532 232h16M532 240h30M566 232h4" stroke="#5B8CFF" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
         </figure>
       </div>
-      <a class="hero-scroll" href="#brand" aria-label="向下滚动查看更多">
+      <a class="hero-scroll" href="#lab" aria-label="向下滚动查看更多">
         <span class="hero-scroll-mouse" aria-hidden="true"></span>
         <span>向下滚动</span>
       </a>
     </section>
 
-    <!-- ============ BrandStatement ============ -->
-    <section class="brand-statement section" id="brand">
+    <!-- ============ LabStatement ============ -->
+    <section class="lab section" id="lab">
       <div class="container">
-        <p class="section-eyebrow reveal">品牌 · HWYZ</p>
-        <h2 class="section-title reveal">寒微雅致</h2>
-        <p class="brand-statement-text reveal">
-          寒微雅致 HWYZ 专注智能座舱与车云协同技术，以软件定义汽车、数据驱动进化，
-          让车辆持续学习、全域连接，驶向更聪明的移动出行。
+        <p class="section-eyebrow reveal">研习录 · 关于</p>
+        <h2 class="section-title reveal">关于研习录</h2>
+        <p class="lab-text reveal">
+          本站聚焦智能座舱、车联网与电子电气（EE）架构等车载技术方向，以研习笔记、架构解读与实践记录为主要内容形态，
+          围绕软件定义汽车、车载数据链路与技术演进持续整理和交流。
+        </p>
+        <p class="lab-note reveal">
+          本站用于车载技术研习、介绍与交流，不提供车辆销售服务。
         </p>
       </div>
     </section>
 
-    <!-- ============ CapabilityGrid ============ -->
-    <section class="capability section" id="capability">
+    <!-- ============ TechnologyDomains ============ -->
+    <section class="domains section" id="domains">
       <div class="container">
-        <p class="section-eyebrow reveal">核心能力</p>
-        <h2 class="section-title reveal">以科技，重新定义移动</h2>
-        <div class="capability-grid">
-          <article class="card capability-card reveal">
+        <p class="section-eyebrow reveal">技术方向</p>
+        <h2 class="section-title reveal">三个核心研究方向</h2>
+        <div class="domains-grid">
+          <article class="domain-card reveal">
             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
               <rect x="8" y="8" width="32" height="24" rx="3" />
-              <path d="M16 20h4M28 20h4M16 26h8" stroke-linecap="round" />
-              <path d="M18 38h12M24 32v6" stroke-linecap="round" />
+              <path d="M16 16h16M16 22h10M16 26h6" stroke-linecap="round" />
+              <path d="M12 36h24" stroke-linecap="round" />
+              <path d="M24 32v4" stroke-linecap="round" />
+              <path d="M22 36c-3-2-9-2-12 0M26 36c3-2 9-2 12 0" stroke-linecap="round" />
             </svg>
             <h3>智能座舱</h3>
-            <p>多屏联动与自然交互，打造沉浸、舒适的移动第三空间。</p>
+            <p>
+              人机交互、车载应用与语音多模态的软件分层与服务边界，关注座舱体验如何围绕驾乘场景组织。
+            </p>
+            <ul class="domain-keywords" aria-label="关键词">
+              <li>人机交互</li>
+              <li>多模态</li>
+              <li>座舱服务</li>
+              <li>应用分层</li>
+            </ul>
+            <a class="domain-link" href="#notes">查看研习内容 <span aria-hidden="true">→</span></a>
           </article>
-          <article class="card capability-card reveal">
+
+          <article class="domain-card reveal">
             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <path d="M14 34c-5 0-8-3.4-8-7.5C6 22 9.5 19 13.5 19c.4-5 4.4-9 9.8-9 5 0 9.3 3.6 10.2 8.4A8 8 0 0 1 41 26c0 4.4-3.6 8-8 8H14z" stroke-linejoin="round" />
-              <path d="M24 22v10M24 22l-4 4M24 22l4 4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <h3>车云协同</h3>
-            <p>车辆与云端实时协同，让服务随车而行、随需而达。</p>
-          </article>
-          <article class="card capability-card reveal">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="36" cy="12" r="4" />
+              <circle cx="10" cy="24" r="4" />
+              <circle cx="24" cy="12" r="4" />
+              <circle cx="38" cy="24" r="4" />
               <circle cx="24" cy="36" r="4" />
-              <path d="M15.5 14.5l6 18M32.5 14.5l-6 18M16 12h16" stroke-linecap="round" />
+              <path d="M14 22.5 20 15M34 22.5 28 15M14 25.5 20 33M34 25.5 28 33" stroke-linecap="round" />
             </svg>
-            <h3>数据智能</h3>
-            <p>数据驱动的持续进化，让每一次出行都更懂你。</p>
+            <h3>车联网</h3>
+            <p>
+              车辆经 TBOX 与移动网络接入云平台的上下行消息链路，覆盖 OTA、远程服务与车载数据闭环的安全连接。
+            </p>
+            <ul class="domain-keywords" aria-label="关键词">
+              <li>车云通信</li>
+              <li>TBOX</li>
+              <li>消息链路</li>
+              <li>OTA</li>
+            </ul>
+            <a class="domain-link" href="#notes">查看研习内容 <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="domain-card reveal">
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="14" y="6" width="20" height="12" rx="3" />
+              <rect x="8" y="26" width="14" height="11" rx="2.5" />
+              <rect x="26" y="26" width="14" height="11" rx="2.5" />
+              <rect x="17" y="41" width="14" height="5" rx="2.5" />
+              <path d="M24 18v8M15 26v-3h18v3" stroke-linecap="round" />
+              <path d="M31 31.5h2M35 31.5h2" stroke-linecap="round" />
+            </svg>
+            <h3>EE 架构</h3>
+            <p>
+              从域集中到区域架构的计算节点演进，梳理中央计算、域/区域控制器、ECU 与车载网络的软件分层。
+            </p>
+            <ul class="domain-keywords" aria-label="关键词">
+              <li>域集中</li>
+              <li>区域架构</li>
+              <li>计算平台</li>
+              <li>车载网络</li>
+            </ul>
+            <a class="domain-link" href="#notes">查看研习内容 <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ ProductStage ============ -->
-    <section class="product section" id="product">
+    <!-- ============ ArchitectureCanvas ============ -->
+    <section class="architecture section" id="architecture">
       <div class="container">
-        <p class="section-eyebrow reveal">车型 · 寒川 HC</p>
-        <h2 class="section-title reveal">寒川03 HanChuan03</h2>
-        <p class="product-tagline reveal">方正宽体的硬派 SUV，以科技重构越野与城市出行。</p>
+        <p class="section-eyebrow reveal">架构与数据流</p>
+        <h2 class="section-title reveal">整车到云端的分层视图</h2>
+        <p class="section-lead reveal">
+          从座舱与车辆，到车载网络与 TBOX，再到云端服务与用户生态，四层视角展示车载技术的数据与能力链路。
+        </p>
 
-        <div class="product-stage" id="product-stage">
-          <figure class="product-main reveal">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="./assets/vehicles/hanchuan03/hero-front-3q.webp"
-              />
-              <img
-                id="product-main-image"
-                src="./assets/vehicles/hanchuan03/hero-front-3q.jpeg"
-                alt="寒川03 HanChuan03 前侧 45° 外观"
-                width="2752"
-                height="1536"
-                loading="lazy"
-              />
-            </picture>
-          </figure>
-          <div class="product-thumbs reveal" aria-label="选择车型视角">
-            <button class="product-thumb is-active" type="button" data-src="./assets/vehicles/hanchuan03/hero-front-3q.webp" data-alt="寒川03 HanChuan03 前侧 45° 外观" aria-pressed="true">前侧45°</button>
-            <button class="product-thumb" type="button" data-src="./assets/vehicles/hanchuan03/exterior-front.webp" data-alt="寒川03 HanChuan03 正面外观" aria-pressed="false">正面</button>
-            <button class="product-thumb" type="button" data-src="./assets/vehicles/hanchuan03/exterior-side.webp" data-alt="寒川03 HanChuan03 侧面外观" aria-pressed="false">侧面</button>
-            <button class="product-thumb" type="button" data-src="./assets/vehicles/hanchuan03/exterior-rear.webp" data-alt="寒川03 HanChuan03 尾部外观" aria-pressed="false">尾部</button>
+        <figure class="arch-canvas reveal">
+          <p class="arch-scroll-hint" aria-hidden="true">← 可左右滑动查看完整架构图 →</p>
+          <div class="arch-viewport">
+            <svg class="arch-svg" viewBox="0 0 1200 460" role="img" aria-labelledby="arch-title arch-desc">
+              <title id="arch-title">整车到云端分层架构概念示意图</title>
+              <desc id="arch-desc">
+                自左至右依次为座舱与车辆、车载网络与 TBOX、云端服务、用户与生态四层；
+                传感器与执行器经域控制器、车载网络与 TBOX 连接车云平台，车云平台连接 OTA、远程服务、数据服务及用户端 App，青色表示关键路径，蓝色表示辅助链路。
+              </desc>
+
+              <!-- layer headers -->
+              <text class="arch-layer" x="155" y="52">座舱与车辆</text>
+              <text class="arch-layer" x="435" y="52">车载网络与 TBOX</text>
+              <text class="arch-layer" x="715" y="52">云端服务</text>
+              <text class="arch-layer" x="995" y="52">用户与生态</text>
+
+              <!-- layer 1: cockpit & vehicle -->
+              <rect class="arch-node" x="60" y="100" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="155" y="128">座舱交互</text>
+              <rect class="arch-node is-key" x="60" y="190" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="155" y="218">域控制器</text>
+              <rect class="arch-node" x="60" y="280" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="155" y="308">传感器 / 执行器</text>
+
+              <!-- layer 2: in-vehicle network & TBOX -->
+              <rect class="arch-node" x="340" y="145" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="435" y="173">车载网络</text>
+              <rect class="arch-node is-key" x="340" y="245" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="435" y="273">TBOX 车云网关</text>
+
+              <!-- layer 3: cloud services -->
+              <rect class="arch-node is-key" x="620" y="100" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="715" y="128">车云平台</text>
+              <rect class="arch-node" x="580" y="190" width="140" height="56" rx="12"/>
+              <text class="arch-label" x="650" y="218">OTA / 远程服务</text>
+              <rect class="arch-node" x="740" y="280" width="120" height="56" rx="12"/>
+              <text class="arch-label" x="800" y="308">数据服务</text>
+
+              <!-- layer 4: users & ecosystem -->
+              <rect class="arch-node" x="900" y="145" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="995" y="173">用户端 App</text>
+              <rect class="arch-node" x="900" y="245" width="190" height="56" rx="12"/>
+              <text class="arch-label" x="995" y="273">开发者生态</text>
+
+              <!-- key path: sensor/actuator -> domain -> vehicle network -> TBOX -> cloud -->
+              <path class="arch-line key" d="M155 280V246"/>
+              <path class="arch-line key" d="M250 218H290V173H340"/>
+              <path class="arch-line key" d="M435 201V245"/>
+              <path class="arch-line key" d="M530 273H575V128H620"/>
+              <circle class="arch-dot key" cx="290" cy="173" r="4"/>
+              <circle class="arch-dot key" cx="575" cy="128" r="4"/>
+
+              <!-- auxiliary links: cloud -> OTA / data / client / ecosystem -->
+              <path class="arch-line aux" d="M650 156V190"/>
+              <path class="arch-line aux" d="M800 156V280"/>
+              <path class="arch-line aux" d="M810 128H855V173H900"/>
+              <path class="arch-line aux" d="M995 201V245"/>
+              <circle class="arch-dot aux" cx="650" cy="190" r="4"/>
+              <circle class="arch-dot aux" cx="800" cy="280" r="4"/>
+              <circle class="arch-dot aux" cx="855" cy="173" r="4"/>
+              <circle class="arch-dot aux" cx="995" cy="223" r="4"/>
+            </svg>
           </div>
-        </div>
 
-        <ul class="product-features">
+          <figcaption class="arch-meta">
+            <span class="arch-badge">概念示意</span>
+            <ul class="arch-legend" aria-label="图例">
+              <li><span class="swatch swatch-key" aria-hidden="true"></span>关键路径</li>
+              <li><span class="swatch swatch-aux" aria-hidden="true"></span>辅助链路</li>
+              <li><span class="swatch swatch-node" aria-hidden="true"></span>概念节点</li>
+            </ul>
+            <p class="arch-note">图为概念示意，用于说明车端、网络、云端与座舱的关系，不代表具体产品架构。</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ NotesAndPractice ============ -->
+    <section class="notes section" id="notes">
+      <div class="container">
+        <p class="section-eyebrow reveal">技术文章与研习笔记</p>
+        <h2 class="section-title reveal">持续整理中的研习内容</h2>
+        <div class="notes-grid">
+          <article class="note-card reveal">
+            <p class="note-cat" data-cat="cockpit">智能座舱</p>
+            <h3>智能座舱的软件分层与服务边界</h3>
+            <p class="note-summary">梳理座舱内 HMI、应用框架与服务的分层方式，讨论舱内服务与整车能力的边界划分。</p>
+            <p class="note-meta"><span class="note-status">整理中</span></p>
+            <a class="note-link" href="#exchange" data-placeholder>研习内容整理中 →</a>
+          </article>
+
+          <article class="note-card reveal">
+            <p class="note-cat" data-cat="connectivity">车联网</p>
+            <h3>TBOX 到云端的消息链路</h3>
+            <p class="note-summary">沿车辆 TBOX、移动网络到车云平台的消息路径，拆解上下行数据流与连接状态管理。</p>
+            <p class="note-meta"><span class="note-status">整理中</span></p>
+            <a class="note-link" href="#exchange" data-placeholder>研习内容整理中 →</a>
+          </article>
+
+          <article class="note-card reveal">
+            <p class="note-cat" data-cat="ee">EE 架构</p>
+            <h3>域集中到区域架构的演进</h3>
+            <p class="note-summary">从分布式 ECU 到域集中、区域架构的演进脉络，以及计算节点与车载网络的关系变化。</p>
+            <p class="note-meta"><span class="note-status">整理中</span></p>
+            <a class="note-link" href="#exchange" data-placeholder>研习内容整理中 →</a>
+          </article>
+
+          <article class="note-card reveal">
+            <p class="note-cat" data-cat="sota">软件定义汽车</p>
+            <h3>软件定义汽车与 OTA</h3>
+            <p class="note-summary">软件与硬件解耦后，OTA 更新、版本演进与服务发布如何重塑整车生命周期。</p>
+            <p class="note-meta"><span class="note-status">整理中</span></p>
+            <a class="note-link" href="#exchange" data-placeholder>研习内容整理中 →</a>
+          </article>
+
+          <article class="note-card reveal">
+            <p class="note-cat" data-cat="data">数据与安全</p>
+            <h3>车载数据闭环与隐私安全</h3>
+            <p class="note-summary">车辆数据从采集、上云到回传的闭环路径，以及在研习与交流中的隐私与安全边界。</p>
+            <p class="note-meta"><span class="note-status">整理中</span></p>
+            <a class="note-link" href="#exchange" data-placeholder>研习内容整理中 →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VehicleAsPlatform ============ -->
+    <section class="vehicle section" id="vehicle">
+      <div class="container">
+        <p class="section-eyebrow reveal">项目实践 · 技术载体</p>
+        <h2 class="section-title reveal">技术载体：寒川03</h2>
+        <p class="vehicle-tagline reveal">
+          寒微雅致 HWYZ · 寒川 HC 车系概念案例，用于说明座舱、网联与电子电气架构在整车中的技术落地关系。
+        </p>
+
+        <figure class="vehicle-main reveal">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./assets/vehicles/hanchuan03/hero-front-3q.webp"
+            />
+            <img
+              src="./assets/vehicles/hanchuan03/hero-front-3q.jpeg"
+              alt="技术载体概念案例：寒川03 HanChuan03 车身"
+              width="2752"
+              height="1536"
+              loading="lazy"
+            />
+          </picture>
+          <figcaption class="vehicle-caption">概念案例 · 寒川03 HanChuan03（寒微雅致 HWYZ）</figcaption>
+        </figure>
+
+        <ul class="vehicle-points">
           <li class="reveal">
-            <h3>宽体硬派</h3>
-            <p>方正车身与宽大轮拱，塑造硬朗的力量感与安全感。</p>
+            <h3>座舱体验</h3>
+            <p>多屏交互、语音与多模态服务如何围绕驾乘场景组织软件分层与体验。</p>
           </li>
           <li class="reveal">
-            <h3>智能座舱</h3>
-            <p>多屏互联与自然交互，营造科技感十足的座舱体验。</p>
+            <h3>网联链路</h3>
+            <p>车辆经 TBOX 与云平台的消息链路，支撑远程服务与 OTA 更新。</p>
           </li>
           <li class="reveal">
-            <h3>全域连接</h3>
-            <p>车云协同，服务随行，能力随软件持续进化。</p>
+            <h3>EE 架构</h3>
+            <p>中央计算与域/区域控制器的层级关系，以及车载网络的数据路径。</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ TechnologyStory ============ -->
-    <section class="technology section" id="technology">
-      <div class="container">
-        <p class="section-eyebrow reveal">技术亮点</p>
-        <h2 class="section-title reveal">软件定义，全域进化</h2>
-
-        <div class="tech-list">
-          <article class="tech-item reveal">
-            <div class="tech-visual" aria-hidden="true">
-              <svg viewBox="0 0 480 300" fill="none" aria-hidden="true">
-                <defs>
-                  <linearGradient id="t1-grad" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0" stop-color="#5B8CFF"/>
-                    <stop offset="1" stop-color="#65F4D5"/>
-                  </linearGradient>
-                </defs>
-                <g stroke="rgba(244,247,250,0.06)" stroke-width="1">
-                  <path d="M120 20v260M240 20v260M360 20v260M20 100h440M20 200h440"/>
-                </g>
-                <path d="M72 236H408" stroke="url(#t1-grad)" stroke-width="1.5" opacity="0.6"/>
-                <path d="M72 224V164L124 146L156 82H322L360 104L392 146L408 164V224Z"
-                      fill="rgba(20,24,32,0.88)" stroke="rgba(101,244,213,0.6)" stroke-width="1.6"/>
-                <path d="M170 94H298L316 116H150Z" fill="#0A0E13" stroke="rgba(244,247,250,0.22)" stroke-width="1"/>
-                <rect x="216" y="66" width="48" height="10" rx="3" fill="#0A0E13" stroke="#65F4D5" stroke-width="1.2"/>
-                <rect x="184" y="140" width="112" height="62" rx="8" fill="rgba(8,10,13,0.92)" stroke="#5B8CFF" stroke-width="1.4"/>
-                <rect x="200" y="154" width="80" height="32" rx="4" fill="none" stroke="rgba(101,244,213,0.9)" stroke-width="1.2"/>
-                <path d="M210 170h18M210 177h26M244 170h6M250 177h12" stroke="#65F4D5" stroke-width="1.3" stroke-linecap="round"/>
-                <path d="M184 171h-66l-12-14M296 171h66l12-14" stroke="#5B8CFF" stroke-width="1.3" stroke-linecap="round"/>
-                <path d="M118 157h-14M362 157h14" stroke="#65F4D5" stroke-width="1.2" stroke-linecap="round"/>
-                <circle cx="146" cy="171" r="3" fill="#65F4D5"/>
-                <circle cx="334" cy="171" r="3" fill="#65F4D5"/>
-                <circle cx="148" cy="224" r="28" fill="#0A0E13" stroke="rgba(244,247,250,0.35)" stroke-width="2.4"/>
-                <circle cx="148" cy="224" r="11" fill="none" stroke="#5B8CFF" stroke-width="1.6"/>
-                <circle cx="344" cy="224" r="28" fill="#0A0E13" stroke="rgba(244,247,250,0.35)" stroke-width="2.4"/>
-                <circle cx="344" cy="224" r="11" fill="none" stroke="#5B8CFF" stroke-width="1.6"/>
-              </svg>
-            </div>
-            <div class="tech-copy">
-              <h3>软件定义汽车</h3>
-              <p>从硬件到软件的可升级体验，让车辆常用常新、越用越懂你。</p>
-            </div>
-          </article>
-
-          <article class="tech-item reveal">
-            <div class="tech-visual" aria-hidden="true">
-              <svg viewBox="0 0 480 300" fill="none" aria-hidden="true">
-                <defs>
-                  <linearGradient id="t2-link" x1="0" y1="1" x2="1" y2="0">
-                    <stop offset="0" stop-color="#5B8CFF"/>
-                    <stop offset="1" stop-color="#65F4D5"/>
-                  </linearGradient>
-                </defs>
-                <path d="M298 96c-26 0-43-16-43-36 0-18 14-34 32-36 3-23 22-39 46-35 20 3 36 18 40 35 19 2 33 15 35 31 2 17-11 32-28 34l-82 7z"
-                      fill="rgba(20,24,32,0.85)" stroke="#5B8CFF" stroke-width="1.5"/>
-                <path d="M296 68l24 16 14-20" stroke="#65F4D5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M56 222V184L94 168L124 118H232L256 138L284 168L306 184V222Z"
-                      fill="rgba(20,24,32,0.9)" stroke="rgba(101,244,213,0.65)" stroke-width="1.5"/>
-                <path d="M132 130h80l12 20h-100z" fill="#0A0E13" stroke="rgba(244,247,250,0.2)" stroke-width="1"/>
-                <circle cx="114" cy="222" r="21" fill="#0A0E13" stroke="rgba(244,247,250,0.35)" stroke-width="2.2"/>
-                <circle cx="114" cy="222" r="8" fill="none" stroke="#5B8CFF" stroke-width="1.4"/>
-                <circle cx="258" cy="222" r="21" fill="#0A0E13" stroke="rgba(244,247,250,0.35)" stroke-width="2.2"/>
-                <circle cx="258" cy="222" r="8" fill="none" stroke="#5B8CFF" stroke-width="1.4"/>
-                <rect x="336" y="164" width="46" height="80" rx="9" fill="rgba(8,10,13,0.92)" stroke="#65F4D5" stroke-width="1.5"/>
-                <rect x="344" y="174" width="30" height="46" rx="3" fill="rgba(20,24,32,0.7)"/>
-                <path d="M348 234h22" stroke="#65F4D5" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M128 186C160 126 224 104 294 96" stroke="url(#t2-link)" stroke-width="1.6" stroke-dasharray="5 6" stroke-linecap="round"/>
-                <path d="M356 162c8-30-2-52-26-66" stroke="url(#t2-link)" stroke-width="1.6" stroke-dasharray="5 6" stroke-linecap="round"/>
-                <path d="M288 206c18 6 30 6 44 0" stroke="url(#t2-link)" stroke-width="1.6" stroke-dasharray="5 6" stroke-linecap="round"/>
-                <circle cx="210" cy="128" r="3.5" fill="#65F4D5"/>
-                <circle cx="262" cy="106" r="3" fill="#5B8CFF"/>
-                <circle cx="336" cy="130" r="3" fill="#65F4D5"/>
-                <circle cx="318" cy="206" r="3" fill="#5B8CFF"/>
-              </svg>
-            </div>
-            <div class="tech-copy">
-              <h3>全域连接</h3>
-              <p>车辆、云端与用户服务深度连接，出行全程在线、服务随手可达。</p>
-            </div>
-          </article>
-
-          <article class="tech-item reveal">
-            <div class="tech-visual" aria-hidden="true">
-              <svg viewBox="0 0 480 300" fill="none" aria-hidden="true">
-                <defs>
-                  <linearGradient id="t3-line" x1="0" y1="1" x2="1" y2="0">
-                    <stop offset="0" stop-color="#5B8CFF"/>
-                    <stop offset="1" stop-color="#65F4D5"/>
-                  </linearGradient>
-                  <radialGradient id="t3-glow" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0" stop-color="#65F4D5" stop-opacity="0.95"/>
-                    <stop offset="1" stop-color="#65F4D5" stop-opacity="0"/>
-                  </radialGradient>
-                </defs>
-                <path d="M336 214a94 94 0 1 1 56-160" stroke="#5B8CFF" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M392 40l-6 52-50-14" stroke="#65F4D5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M70 246l42-34 34 12 44-46 36 12 48-56 38 10" stroke="url(#t3-line)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="112" cy="212" r="5" fill="#5B8CFF"/>
-                <circle cx="190" cy="180" r="7" fill="#5B8CFF"/>
-                <circle cx="270" cy="134" r="9" fill="#65F4D5"/>
-                <circle cx="366" cy="78" r="14" fill="url(#t3-glow)"/>
-                <circle cx="366" cy="78" r="5" fill="#65F4D5"/>
-                <path d="M366 78v-16" stroke="#65F4D5" stroke-width="1.4" stroke-linecap="round"/>
-                <path d="M70 270H410" stroke="rgba(101,244,213,0.22)" stroke-width="1"/>
-                <circle cx="150" cy="270" r="2.5" fill="#5B8CFF"/>
-                <circle cx="250" cy="270" r="2.5" fill="#5B8CFF"/>
-                <circle cx="360" cy="270" r="2.5" fill="#65F4D5"/>
-              </svg>
-            </div>
-            <div class="tech-copy">
-              <h3>持续进化</h3>
-              <p>基于软件与数据的持续迭代，让能力生长，让体验常新。</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ContactCTA ============ -->
-    <section class="contact section" id="contact">
-      <div class="container contact-inner">
-        <div class="contact-copy">
-          <p class="section-eyebrow reveal">预约交流</p>
-          <h2 class="section-title reveal">与我们一起定义下一程</h2>
+    <!-- ============ TechExchange ============ -->
+    <section class="exchange section" id="exchange">
+      <div class="container exchange-inner">
+        <div class="exchange-copy">
+          <p class="section-eyebrow reveal">技术交流</p>
+          <h2 class="section-title reveal">围绕车载技术，交换观点与实践</h2>
           <p class="section-lead reveal">
-            无论你是想了解寒川03、探讨车载技术，还是寻求品牌合作，
-            都欢迎与我们交流。
+            围绕智能座舱、车联网与 EE 架构，欢迎通过公开渠道或下方留言，交流你的理解与实践。
           </p>
+          <ul class="exchange-channels reveal" aria-label="公开交流渠道">
+            <li>
+              <a class="channel-link" href="mailto:tech@hwyz.example" data-placeholder>公开邮箱 · tech@hwyz.example</a>
+            </li>
+            <li>
+              <a class="channel-link" href="#" data-placeholder>代码仓库（整理中）</a>
+            </li>
+          </ul>
         </div>
 
-        <form class="contact-form reveal" id="contact-form" novalidate>
+        <form class="exchange-form reveal" id="exchange-form" novalidate>
           <p class="form-note" id="form-note">演示模式：提交内容仅在本页面验证，不会发送或保存。</p>
 
           <div class="form-field">
@@ -362,31 +457,31 @@
           </div>
 
           <div class="form-field is-full">
-            <label for="f-interest">关注方向 <span class="required">*</span></label>
+            <label for="f-interest">技术方向 <span class="required">*</span></label>
             <select id="f-interest" name="interest">
-              <option value="">请选择关注方向</option>
-              <option value="产品咨询">产品咨询</option>
-              <option value="技术交流">技术交流</option>
-              <option value="品牌合作">品牌合作</option>
-              <option value="媒体联系">媒体联系</option>
+              <option value="">请选择技术方向</option>
+              <option value="智能座舱">智能座舱</option>
+              <option value="车联网">车联网</option>
+              <option value="EE 架构">EE 架构</option>
+              <option value="软件定义汽车">软件定义汽车</option>
               <option value="其他">其他</option>
             </select>
             <p class="field-error" id="f-interest-error" aria-live="polite"></p>
           </div>
 
           <div class="form-field is-note">
-            <label for="f-note">备注</label>
+            <label for="f-note">交流内容</label>
             <textarea
               id="f-note"
               name="note"
               rows="3"
               maxlength="200"
-              placeholder="想了解的内容（选填）"
+              placeholder="想交流的技术话题或问题（选填）"
             ></textarea>
             <p class="field-error" id="f-note-error" aria-live="polite"></p>
           </div>
 
-          <button class="btn btn-primary form-submit" type="submit">提交预约交流</button>
+          <button class="btn btn-primary form-submit" type="submit">发起技术交流</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -398,32 +493,35 @@
     <div class="container footer-top">
       <div class="footer-brand">
         <img
-          src="./assets/brand/hwyz-lockup-white.png"
-          alt="寒微雅致 HWYZ ADVANCED MOBILITY"
-          width="1400"
-          height="1039"
+          src="./assets/brand/hwyz-mark-white.png"
+          alt="寒微雅致 HWYZ 翼形徽标"
+          width="62"
+          height="32"
           loading="lazy"
         />
         <p>寒雅车载技术研习录</p>
       </div>
       <nav class="footer-nav" aria-label="页脚导航">
         <ul>
-          <li><a href="#brand">品牌</a></li>
-          <li><a href="#technology">技术</a></li>
-          <li><a href="#product">车型</a></li>
-          <li><a href="#contact">预约交流</a></li>
+          <li><a href="#lab">关于</a></li>
+          <li><a href="#domains">技术方向</a></li>
+          <li><a href="#notes">技术文章</a></li>
+          <li><a href="#exchange">技术交流</a></li>
           <li><a href="#privacy-placeholder" data-placeholder>隐私政策（占位）</a></li>
         </ul>
       </nav>
     </div>
     <div class="container footer-bottom">
+      <p class="footer-positioning">本站用于车载技术研习、介绍与交流，不提供车辆销售服务。</p>
       <p>© <span id="copyright-year">2026</span> 寒微雅致 HWYZ · 寒雅车载技术研习录</p>
-      <p class="footer-icp">沪ICP备2026047005号-1</p>
+      <p class="footer-icp">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2026047005号-1</a>
+      </p>
     </div>
   </footer>
 
   <script>
-    // Placeholder links (e.g. privacy policy) must not navigate.
+    // Placeholder links (e.g. privacy policy, pending articles) must not navigate.
     document.querySelectorAll('a[data-placeholder]').forEach(function (link) {
       link.addEventListener('click', function (event) {
         event.preventDefault();

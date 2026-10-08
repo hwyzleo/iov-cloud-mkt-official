@@ -13,15 +13,44 @@
   transform: translateY(0);
 }
 
-/* Stagger card entries inside grids */
-.capability-card:nth-child(1),
-.tech-item:nth-child(1) { transition-delay: 0ms; }
+/* Stagger card entries inside grids (80–120 ms steps) */
+.domain-card:nth-child(1),
+.note-card:nth-child(1),
+.vehicle-points li:nth-child(1) { transition-delay: 0ms; }
 
-.capability-card:nth-child(2),
-.tech-item:nth-child(2) { transition-delay: 120ms; }
+.domain-card:nth-child(2),
+.note-card:nth-child(2),
+.vehicle-points li:nth-child(2) { transition-delay: 120ms; }
 
-.capability-card:nth-child(3),
-.tech-item:nth-child(3) { transition-delay: 240ms; }
+.domain-card:nth-child(3),
+.note-card:nth-child(3),
+.vehicle-points li:nth-child(3) { transition-delay: 240ms; }
+
+.note-card:nth-child(4) { transition-delay: 120ms; }
+.note-card:nth-child(5) { transition-delay: 240ms; }
+
+/* Technology node motion: low-frequency pulse / path flow.
+   Cycle length is >= 2.4 s to avoid a promotional feel. */
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.3; }
+  50%      { opacity: 1; }
+}
+
+@keyframes path-flow {
+  to { stroke-dashoffset: -28; }
+}
+
+.arch-svg .arch-dot {
+  animation: node-pulse 3.4s ease-in-out infinite;
+}
+
+.arch-svg .arch-dot:nth-child(odd) {
+  animation-delay: 1.2s;
+}
+
+.arch-svg .arch-line.key {
+  animation: path-flow 4s linear infinite;
+}
 
 /* Respect prefers-reduced-motion: disable non-essential motion */
 @media (prefers-reduced-motion: reduce) {
@@ -37,8 +66,12 @@
     transition: none !important;
   }
 
-  .hero-scroll-mouse::after {
-    animation: none;
+  .hero-scroll-mouse::after,
+  .hero-tech-overlay .path-flow,
+  .hero-tech-overlay .node-pulse,
+  .arch-svg .arch-dot,
+  .arch-svg .arch-line.key {
+    animation: none !important;
   }
 
   .card:hover,

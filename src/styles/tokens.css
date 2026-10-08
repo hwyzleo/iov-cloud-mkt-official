@@ -1,5 +1,5 @@
 /* ============================================================
-   Design Tokens (CR-MKT-OFFICIAL-DSN-001 / SPEC Design v0.1)
+   Design Tokens (CR-MKT-OFFICIAL-DSN-002 / SPEC Design v0.2)
    ============================================================ */
 :root {
   /* -- Color ------------------------------------------------- */
@@ -9,7 +9,12 @@
   --color-text-secondary: #a8b0be;  /* 辅助文字 */
   --color-accent-cyan: #65f4d5;     /* 电光青 - primary CTA */
   --color-accent-blue: #5b8cff;     /* 冷蓝 - secondary gradient */
+  --color-accent-purple: #8d7cff;   /* 低饱和紫 - content category */
   --color-brand-navy: #112b51;      /* 品牌深蓝参考色 */
+  /* Low-saturation category tints (NotesAndPractice) */
+  --color-cat-cyan: #7bd9c6;
+  --color-cat-blue: #8ba6e8;
+  --color-cat-purple: #a79ce6;
   --color-border: rgba(255, 255, 255, 0.12);
   --color-border-strong: rgba(255, 255, 255, 0.28);
   --color-danger: #ff6b6b;
